@@ -19,7 +19,7 @@ In this model, we need to preprocess the dataset such that the same set of words
 
 The command for preprocessing the data is given below
 
-    'python preprocess.py -train_src data/src-train.txt -train_tgt data/tgt-train.txt -valid_src data/src-val.txt -valid_tgt data/tgt-val.txt -save_data data/demo -share_vocab -dynamic_dict'
+    python preprocess.py -train_src data/src-train.txt -train_tgt data/tgt-train.txt -valid_src data/src-val.txt -valid_tgt data/tgt-val.txt -save_data data/demo -share_vocab -dynamic_dict
 
 The data consists of parallel source (src) and target (tgt) data containing one example per line with tokens separated by a space:
 
@@ -38,14 +38,14 @@ After running the preprocessing, the following files are generated:
 
 The command to train the model is given by:
 
-    'python train.py -data data/demo -save_model transformer_model -share_embeddings'
+    python train.py -data data/demo -save_model transformer_model -share_embeddings
 
 The above command would train the whole data on the transformer architecture and will consume a lot of processing and time.This command will give a pretrained file which is our transformer model and from now we will use this file as our model for the purpose of evaluation.
 
 ## Step 3: Summarize
 The command to generate the summary from model we run the following command
 
-    'python translate.py -model transformer_model_epochX_PPL.pt -src data/src-test.txt -o output_pred.txt -beam_size 10 -share_vocab'
+    python translate.py -model transformer_model_epochX_PPL.pt -src data/src-test.txt -o output_pred.txt -beam_size 10 -share_vocab
 
 Now we have a model which you can use to predict on new data. This will output predictions into pred.txt.
 
@@ -56,7 +56,7 @@ we have used the file rouge.py for ROGUE evaluation.
 
 The command for running the rogue file is as follows
 
-    'python rogue.py -s output_pred.txt -t data/test.txt.tgt'
+    python rogue.py -s output_pred.txt -t data/test.txt.tgt
 
 ## Step 5: Connecting to the UI
 
@@ -64,11 +64,11 @@ Now as the model training is done we have to connect it to the User Interface.We
 
 We have to run the server.py file as it will allow us use the pretrained file for predicting any new summary from the article entered in thr User Interface.
 
-    'python server.py'
+    python server.py
     
 Now to get the user interface to be hosted on the localhost we have to run the given command
     
-    'python app.py'
+    python app.py
     
 This will get the User Interface running and then the user can input a article and the smmary will be generated and will be shown to the ouput of the user Input.
 
