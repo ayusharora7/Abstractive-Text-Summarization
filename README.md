@@ -30,9 +30,9 @@ The data consists of parallel source (src) and target (tgt) data containing one 
 
 After running the preprocessing, the following files are generated:
 
-- demo.train.pt: serialized PyTorch file containing training data
-- demo.valid.pt: serialized PyTorch file containing validation data
-- demo.vocab.pt: serialized PyTorch file containing vocabulary data
+- demo.train.pt:-PyTorch file containing training data
+- demo.valid.pt:-PyTorch file containing validation data
+- demo.vocab.pt:-PyTorch file containing vocabulary data
 
 ## Step 2: Train the model
 
@@ -43,7 +43,7 @@ The command to train the model is given by:
 The above command would train the whole data on the transformer architecture and will consume a lot of processing and time.This command will give a pretrained file which is our transformer model and from now we will use this file as our model for the purpose of evaluation.
 
 ## Step 3: Summarize
-The command for checking the working of the model we run the following command
+The command to generate the summary from model we run the following command
 
     'python translate.py -model transformer_model_epochX_PPL.pt -src data/src-test.txt -o output_pred.txt -beam_size 10 -share_vocab'
 
@@ -52,5 +52,23 @@ Now we have a model which you can use to predict on new data. This will output p
 ## Step 4: Evaluate with ROUGE
 
 The main evaluation metrics for summarization used is the ROGUE method which compares the system summary with the reference summary.
-we have used the file files2rouge for ROGUE evaluation.
+we have used the file rouge.py for ROGUE evaluation.
+
+The command for running the rogue file is as follows
+
+    'python rogue.py -s output_pred.txt -t data/test.txt.tgt'
+
+## Step 5: Connecting to the UI
+
+Now as the model training is done we have to connect it to the User Interface.We have used flask micro-web framework for hosting our web page.The html and css files are in the static and template folder respectively.
+
+We have to run the server.py file as it will allow us use the pretrained file for predicting any new summary from the article entered in thr User Interface.
+
+    'python server.py'
+    
+Now to get the user interface to be hosted on the localhost we have to run the given command
+    
+    'python app.py'
+    
+This will get the User Interface running and then the user can input a article and the smmary will be generated and will be shown to the ouput of the user Input.
 
