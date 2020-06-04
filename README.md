@@ -3,8 +3,8 @@
 Text summarization is the process of shortening a corpus of text to a few sentences that together hold the most essential informations of the original contents in the source corpus.Abstractive Text Summarization is the process of ﬁnding the most essential meaning of a text and re-write them in a summary. The resulted summary is an interpretation of the source.
 
 ### Installation Required
-- Python 3.5
-- OpenNmt library
+- Python 3.5 or higher
+- OpenNMT library
 - Pytorch framework
 - flask
 - Google Colab
@@ -19,7 +19,7 @@ In this model, we need to preprocess the dataset such that the same set of words
 
 The command for preprocessing the data is given below
 
-    'python preprocess.py -train_src data/src-train.txt -train_tgt data/tgt-train.txt -valid_src data/src-val.txt -valid_tgt data/tgt-val.txt -save_data data/demo -share_vocab -dynamic_dict -src_vocab_size 50000'
+    'python preprocess.py -train_src data/src-train.txt -train_tgt data/tgt-train.txt -valid_src data/src-val.txt -valid_tgt data/tgt-val.txt -save_data data/demo -share_vocab -dynamic_dict'
 
 The data consists of parallel source (src) and target (tgt) data containing one example per line with tokens separated by a space:
 
