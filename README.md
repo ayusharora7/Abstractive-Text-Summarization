@@ -15,7 +15,7 @@ To run the files all the files have to be uploaded on the Google Colab or any ot
 
 ## Step 1: Preprocess the data
 
-In this model, we need to preprocess the dataset such that the same set of words are used for the input and output sentences.The dataset used is the CNN/dailymail dataset which is a collection of the articles mostly news, interviews that have been published on the two popular websites CNN.com and dailymail.com.
+In this model, we need to preprocess the dataset such that the same set of words are used for the input and output sentences.The dataset used is the CNN/dailymail dataset which is a collection of the articles mostly news, interviews that have been published on the two popular websites CNN.com and dailymail.com.The dataset can be found [here]( https://s3.amazonaws.com/opennmt-models/Summary/cnndm.tar.gz).
 
 The command for preprocessing the data is given below
 
