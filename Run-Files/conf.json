@@ -1,0 +1,20 @@
+
+
+{
+    "models_root": "./",
+    "models": [
+        {
+            "id": 0,
+            "model": "transformer_model.pt",
+            "load": true,
+            "opt": {
+                "gpu": 0
+            },
+
+            "“tokenizer”": {
+                "“type”": "“pyonmttok”",
+                "“mode”": "“str”"
+            }
+        }
+    ]   
+}
