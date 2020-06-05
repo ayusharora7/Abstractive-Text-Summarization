@@ -128,7 +128,7 @@ def _get_parser():
     parser.add_argument("--port", type=int, default="5000")
     parser.add_argument("--debug", "-d", action="store_true")
     parser.add_argument("--config", "-c", type=str,
-                        default="./available_models/conf.json")
+                        default="./conf.json")
     return parser
 
 
