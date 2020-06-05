@@ -60,7 +60,7 @@ The command for running the rogue file is as follows
 
 ## Step 5: Connecting to the UI
 
-Now as the model training is done we have to connect it to the User Interface.We have used flask micro-web framework for hosting our web page.The html and css files are in the static and template folder respectively.
+Now as the model training is done we have to connect it to the User Interface.We have used flask micro-web framework for hosting our web page.The html and css files are in the template and static folder respectively.
 
 We have to run the server.py file as it will allow us use the pretrained file for predicting any new summary from the article entered in thr User Interface.
 
