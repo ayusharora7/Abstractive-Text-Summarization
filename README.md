@@ -1,4 +1,4 @@
-# Abstractive-Text-Summarization
+# Abstractive Text Summarization
 
 Text summarization is the process of shortening a corpus of text to a few sentences that together hold the most essential informations of the original contents in the source corpus.Abstractive Text Summarization is the process of ﬁnding the most essential meaning of a text and re-write them in a summary. The resulted summary is an interpretation of the source.
 
@@ -11,7 +11,7 @@ Text summarization is the process of shortening a corpus of text to a few senten
 
 ## Quickstart
 
-To run the files all the files have to be uploaded on the Google Colab or any other high end gpu device.
+To run the files all the files have to be uploaded on the Google Colab(with the runtime type as TPU) or any other high end gpu device.
 
 ## Step 1: Preprocess the data
 
